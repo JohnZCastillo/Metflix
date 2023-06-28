@@ -115,4 +115,40 @@ body
 @media only screen and (max-width: 600px) 
 {
 
+    .header .indexpage
+    {
+        width: 95%;
+    }
+    
+    .header .indexpage h1
+    {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+    .header .indexpage div
+    {
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .header .indexpage div div
+    {
+        padding: 0.5em;
+    }
+    
+    .profile img
+    {
+        width: 45%;
+        margin-left: 27.5%;
+    }
+    
+    .profile div
+    {
+        margin-top: -5px;
+    }
+    .header .indexpage button
+    {
+        width: 60%;
+        margin: 0 20%;
+    }
 }
