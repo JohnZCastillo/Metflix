@@ -15,17 +15,17 @@
 <body>
     <div class = "header">
         <nav>
-            <img class = "logo"  src = "../Media/Logo.png">
+            <a href = "../../index2.html" ><img class = "logo"  src = "../Media/Logo.png"></a>
         </nav>
     </div>
     <div class="signuppage">
         <h1>Sign Up</h1>
         <form action = "" method = "">
-            <input class = "input" type="text" required placeholder="Enter your full name">
-            <input class = "input" type="text" required placeholder="Enter your email">
-            <input class = "input" type="password" required placeholder="Password">
-            <div class = "result">Result</div>
-            <button>Sigin Up</button>
+            <input class = "input" type="text" placeholder="Enter your full name" id = "fullname">
+            <input class = "input" type="text" placeholder="Enter your email" id = "email">
+            <input class = "input" type="password" placeholder="Password" id = "password">
+            <div class = "result"><p>Result</p></div>
+            <button id = "button">Sigin Up</button>
 
             <input class = "check" type = "checkbox">
             <label>Remember Me</label>
@@ -39,5 +39,37 @@
     <div class="footer">
         <p class="copyright-text">&copy Dahan DelaPeña Dulay Granada Marasigan Mojica</p>
     </div>
+
+    <script>
+        let fullname = document.querySelector('#fullname');
+        let email = document.querySelector('#email');
+        let password = document.querySelector('#password');
+        let result = document.querySelector('.result');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function(event)
+        {
+            event.preventDefault();
+            if (fullname.value.trim() !== '' && email.value.trim() !== '' && password.value.trim() !== '')
+            {
+                setTimeout(function()
+                {
+                    result.innerHTML = "The Account is Registered";
+                    result.style.opacity = "1";
+                }, 500);
+                
+                setTimeout(function()
+                {
+                    window.location.href = "../Webpages/signin.html";
+                }, 2000);
+                
+            } 
+            else 
+            {
+                result.innerHTML = "The Name or Email or Password is empty";
+                result.style.opacity = "1";
+            }
+        });
+    </script>
 </body>
 </html>

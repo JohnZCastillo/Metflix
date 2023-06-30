@@ -94,6 +94,14 @@ body
     font-size: 1.2em;
     
 }
+a .profile div
+{
+    text-decoration: none;
+}
+a 
+{
+    text-decoration: none;
+}
 
 .header .indexpage button:hover
 {
