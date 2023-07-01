@@ -73,11 +73,14 @@ nav
     text-align: justify;
 }
 
+.container
+{
+    display: flex;
+    justify-content: center;
+}
 .number
 {
     width: 30%;
-    margin-left: 35%;
-    display: flex;
     flex-direction: column;
 }
 
@@ -92,6 +95,7 @@ nav
     display: flex;
     justify-content: center;
 }
+
 .number div input
 {
     height: 4rem;
@@ -107,6 +111,18 @@ nav
     padding: 15px 15px;
     font-size: 2rem;
     height: 4rem;
+}
+
+.number div #time
+{
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 12.5px 25px;
+    appearance: none;
 }
 button 
 {
