@@ -1,3 +1,8 @@
+<?php
+include('connection.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +10,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="/src/User/book1.css">
+    <link rel="stylesheet" href="../User/book1.css">
 
-    <link rel="shortcut icon" href="/src/Media/Icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Media/Icon.png" type="image/x-icon">
 
     <title>Metflix</title>
 </head>
 <body>
     <div class="header">
         <nav>
-            <img class = "logo"  src = "/src/Media/Logo.png">
+            <img class = "logo"  src = "../Media/Logo.png">
             <div>
                 <button onclick="history.back()"> Go Back </button>
             </div>
         </nav>
 
         <div class="title">
-            <h1>Ant-Man and the Wasp: Quantumania</h1>
-                <h2>Now showing in IMetflix</h2>
-                <h2>Price: ₱300</h2>
-            <p>Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.</p>
+            <?php echo'<h1>' . $name1 . '</h1>' ?>
+            <h2>Now showing in IMetflix</h2>
+            <?php echo'<h2> Price: ' . $price1 . '</h2>' ?>
+            <?php echo'<p>' . $longdescribe . '</p>' ?>
             <div class="container">
                 <div class = "number">
                     <h3>How many tickets?</h3>
