@@ -13,6 +13,13 @@ include('connection.php');
 
     <link rel="shortcut icon" href="../Media/Icon.png" type="image/x-icon">
 
+    <script>
+    function goback()
+    {
+        window.location.href = "userindex.php";
+    }
+    </script>
+
     <title>Metflix</title>
 </head>
 <body>
@@ -20,7 +27,7 @@ include('connection.php');
         <nav>
             <img class = "logo"  src = "../Media/Logo.png">
             <div>
-                <button onclick="history.back()"> Back </button>
+                <button onclick="goback()"> Back </button>
             </div>
         </nav>
 

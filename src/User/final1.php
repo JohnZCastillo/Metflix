@@ -28,7 +28,7 @@ include('connection.php');
             <h1>Please pay at the counter</h1>
             <h1>Purchase successfully done!</h1>
             <h1>Have a great day thank you</h1>
-            <button id = "button"type="submit">Go Back to Home</button>
+            <button id = "button" type="submit">Go Back to Home</button>
         </div>
     </div>
 
@@ -40,7 +40,7 @@ include('connection.php');
 
     document.querySelector('#button').addEventListener('click', function() 
     {
-        window.location.href = "../User/userindex.php";
+        window.location.href = "../User/userbook.php";
     });
     </script>
 </body>

@@ -51,7 +51,7 @@ $price2 = $row3['price'];
 
     document.querySelector('#button').addEventListener('click', function() 
     {
-        window.location.href = "../User/userindex.php";
+        window.location.href = "../User/userbook.php";
     });
     </script>
 </body>

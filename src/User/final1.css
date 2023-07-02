@@ -90,7 +90,8 @@ button
     color: #777;
 }
 
-.copyright-text {
+.copyright-text 
+{
     font-size: 1.2rem;
     text-align: center;
 }
@@ -116,69 +117,25 @@ button
     {
         position: unset;
         transform: none;
-        padding-top: 30px;
+        padding-top: 0px;
     }
 
     .title h1 
     {
-        font-size: 1.6rem;
-        width: 100%;
-        line-height: 30px;
-    }
-    .title h2
-    {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-    .title p
-    {
-        margin-bottom: 10px;
-        width: 100%;
-        line-height: 50px;
-        opacity: 0.75;
-        margin-left: 0%;
-        text-align: justify;
-    }
-    .container
-    {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .number
-    {
-        width: 70%;
-        margin-left: 15%;
-        margin-bottom: 1rem;
-    }
-    .number h3
-    {
-        font-size: 1.2rem;
-    }
-    #add, #subtract
-    {
-        margin: 0px 10px;
-        padding: 5px 5px;
         font-size: 1.5rem;
-        height: 3rem;
+        width: 100%;
+        line-height: 100px;
     }
-    .number div input
-    {
-        height: 3rem;
-        border-bottom: 3px solid white;
-        font-size: 1.5rem;
-        width: 50%;
-    }
-
+    
     #button
     {
-        font-size: 1.45rem;
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
+        font-size: 1rem;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .footer
     {
-        margin-top: 150px;
+        margin-top: 0px;
     }
 }
