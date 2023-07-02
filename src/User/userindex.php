@@ -1,3 +1,15 @@
+<?php
+include('../Webpages/account.php');
+
+$number = $_GET['number'];
+
+$result = $connection->query("SELECT fullname FROM accounts where number = $number");
+
+$row = $result->fetch_assoc();
+
+$fullname = $row['fullname'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +20,14 @@
     
     <link rel="stylesheet" href="../User/userindex.css">
 
-    <link rel="shortcut icon" href="src/Media/Icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../src/Media/Icon.png" type="image/x-icon">
 
     <title>Metflix</title>
 </head>
 <body>
     <div class = "header">
         <div class = "indexpage">
-            <h1>What you want to do?</h1>
+            <h1>Welcome <br><?php echo $fullname; ?></h1>
             <div>
                 <a href = "../User/userbook.php">
                     <div class = "profile">

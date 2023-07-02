@@ -20,7 +20,7 @@ include('connection.php');
         <nav>
             <img class = "logo"  src = "../Media/Logo.png">
             <div>
-                <button onclick="history.back()"> Log Out </button>
+                <button onclick="history.back()"> Back </button>
             </div>
         </nav>
 
