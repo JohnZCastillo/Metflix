@@ -107,7 +107,6 @@ $price2 = $row2['price'];
 
         let variable = "<?php echo $number; ?>";
 
-        console.log(variable);
         url += "?number=" +  encodeURIComponent(variable);
         window.location.href = url;
     });

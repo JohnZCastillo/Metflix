@@ -9,7 +9,7 @@ include('connection.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="../User/receipt1.css">
+    <link rel="stylesheet" href="../User/final1.css">
 
     <link rel="shortcut icon" href="../Media/Icon.png" type="image/x-icon">
 
@@ -25,13 +25,10 @@ include('connection.php');
         </nav>
 
         <div class="title">
-            <?php echo'<h1>' . $name1 . '</h1>' ?>
-            <div>
-            <h2> Time: <input type = "text" id = "time"></input></h2>
-            <h2> No. of Tickets: <input type = "text" id = "ticket"></input></h2>
-            <h2> Total Price: <input type = "text" id = "total"></input></h2>
-            </div>
-            <button id = "button"type="submit">Book</button>
+            <h1>Please pay at the counter</h1>
+            <h1>Purchase successfully done!</h1>
+            <h1>Have a great day thank you</h1>
+            <button id = "button"type="submit">Go Back to Home</button>
         </div>
     </div>
 
@@ -40,18 +37,10 @@ include('connection.php');
     </div>
 
     <script>
-    
-    let count = localStorage.getItem('count');
-    let time = localStorage.getItem('time');
-
-    document.querySelector('#ticket').value = count;
-    document.querySelector('#total').value = count * 750;
-
-    document.querySelector('#time').value = time;
 
     document.querySelector('#button').addEventListener('click', function() 
     {
-        window.location.href = "../User/final1.php";
+        window.location.href = "../User/userindex.php";
     });
     </script>
 </body>

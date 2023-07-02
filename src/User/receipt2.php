@@ -62,7 +62,15 @@ $price2 = $row3['price'];
     document.querySelector('#time').value = time;
 
     let variable = "<?php echo $number; ?>";
-    console.log(variable);
+
+    let url = "../User/final2.php";
+
+    url += "?number=" +  encodeURIComponent(variable);
+
+    document.querySelector('#button').addEventListener('click', function() 
+    {
+        window.location.href = url;
+    });
 
     </script>
 </body>
