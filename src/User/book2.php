@@ -2,8 +2,15 @@
 include('connection.php');
 
 $number = $_GET['number'];
-$name = $_GET['name'];
-$description = $_GET['description'];
+
+$result2 = mysqli_query($connection, "SELECT * FROM data where number = $number");
+$row2 = $result2->fetch_assoc();
+
+$number2 = $row2['number'];
+$name2 = $row2['name'];
+$description2 = $row2['description'];
+$imagePath2 = $row2['path'];
+$price2 = $row2['price'];
 
 ?>
 
@@ -31,10 +38,10 @@ $description = $_GET['description'];
         </nav>
 
         <div class="title">
-            <?php echo'<h1>' . $name . '</h1>' ?>
+            <?php echo'<h1>' . $name2 . '</h1>' ?>
             <h2>Now showing</h2>
             <?php echo'<h2> Price: ' . $price2 . '</h2>' ?>
-            <?php echo'<p>' . $description . '</p>' ?>
+            <?php echo'<p>' . $description2 . '</p>' ?>
             <div class="container">
                 <div class = "number">
                     <h3>How many tickets?</h3>

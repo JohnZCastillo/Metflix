@@ -48,19 +48,31 @@ include('connection.php');
         $price2 = $row2['price'];
         
         $name2 = str_replace("'", "", $name2);
-        $description2 = str_replace("'", "", $description2);
+        $description2 = str_replace("'", " ", $description2);
+        $name2 = str_replace(":", " ", $name2);
+        $name2 = str_replace("-", " ", $name2);
 
         echo '
             <div id="movie" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(' . $imagePath2 . ');"> 
                 <div class="moviedetails">
                     <h3 class="moviename">' . $name2 . '</h3>
                     <p class="moviedescription">' . $description2 . '</p>
-                    <button class="moviebook"  onclick = "littlebook()" >Book</button>
+                    <button class="moviebook" onclick = "moviebook(' . $number2 . ')">Book</button>
                 </div>
             </div>';
     }
 
-    echo '</div>';
+    echo '
+    <script>
+    function moviebook(number)
+    {
+        var url = "../User/book2.php";
+        url += "?number=" +  encodeURIComponent(number);
+        window.location.href = url;
+    }
+    
+    </script>
+    </div>';
     ?>
 
     </div>
@@ -68,16 +80,7 @@ include('connection.php');
         <p class="copyright-text">&copy Dahan DelaPeña Dulay Granada Marasigan Mojica</p>
     </div>
 
-    <script src = "../JS/userbook.js">
-    function littlebook() 
-    {
-        var url = "../User/book2.php";
-        url += "?number=" +  encodeURIComponent(<?php $number2 ?>);
-        url += "&name=" +  encodeURIComponent(<?php $name2 ?>);
-        url += "&description=" +  encodeURIComponent(<?php $description2 ?>);
-        window.location.href = url;
-    }
-    </script>
+    <script src = "../JS/userbook.js"></script>
     
 </body>
 </html>
