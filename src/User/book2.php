@@ -14,7 +14,6 @@ $price2 = $row2['price'];
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

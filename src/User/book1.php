@@ -14,6 +14,8 @@ include('connection.php');
 
     <link rel="shortcut icon" href="../Media/Icon.png" type="image/x-icon">
 
+    <script src = "book1.js"></script>
+
     <title>Metflix</title>
 </head>
 <body>
@@ -34,9 +36,9 @@ include('connection.php');
                 <div class = "number">
                     <h3>How many tickets?</h3>
                     <div>
-                        <button id = "add">+</button>
-                        <input type = "text">
-                        <button id = "subtract">-</button>
+                        <button id = "add" onclick="buttonClick(1)">+</button>
+                        <input type = "text" id = "ticketvalue">
+                        <button id = "subtract" onclick="buttonClick(0)">-</button>
                     </div>
                 </div>
                 <div class = "number">

@@ -54,7 +54,6 @@ nav
     font-weight: 600;
 }
 
-
 .title h2
 {
     text-align: center;
@@ -103,7 +102,10 @@ nav
     background: transparent;
     border: none;
     border-bottom: 5px solid white;
-
+    color:white;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
 }
 #add, #subtract
 {
