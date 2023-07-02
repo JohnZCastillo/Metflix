@@ -148,10 +148,10 @@ button
     cursor: pointer;
     padding: 5px 60px;
     height: 2.5em;
-    width: 20%;
     margin-top: 2%;
+    width: 20%;
     margin-left: 40%;
-
+    margin-right: 40%;
 }
 
 
@@ -188,13 +188,40 @@ button
     {
         position: unset;
         transform: none;
-        padding-top: 150px;
+        padding-top: 30px;
     }
 
     .title h1 
     {
-        font-size: 30px;
+        font-size: 1.6rem;
+        width: 100%;
+        line-height: 30px;
     }
+    .title h2
+    {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .title p
+    {
+        margin-bottom: 10px;
+        width: 100%;
+        line-height: 50px;
+        opacity: 0.75;
+        margin-left: 0%;
+        text-align: justify;
+    }
+    .container
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .number
+    {
+        width: 70%;
+    }
+
     .moviename
     {
         font-size: 0.85rem;

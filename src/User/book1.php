@@ -2,7 +2,6 @@
 include('connection.php');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +12,6 @@ include('connection.php');
     <link rel="stylesheet" href="../User/book1.css">
 
     <link rel="shortcut icon" href="../Media/Icon.png" type="image/x-icon">
-
-    <script src = "book1.js"></script>
 
     <title>Metflix</title>
 </head>
@@ -61,5 +58,30 @@ include('connection.php');
     <div class="footer">
         <p class="copyright-text">&copy Dahan DelaPeña Dulay Granada Marasigan Mojica</p>
     </div>
+
+    <script>
+    let count = 0;
+
+    function buttonClick(choice) 
+    {
+        if(choice === 1)
+        {
+            count += 1;
+        }
+        else if(choice === 0 && count === 0)
+        {
+            count += 0;
+        }
+        else if(choice === 0 )
+        {
+            count += (-1);
+        }
+
+        document.querySelector('#ticketvalue').value = count;
+        
+    }
+
+    document.querySelector('#ticketvalue').value = count;
+    </script>
 </body>
 </html>
