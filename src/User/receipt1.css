@@ -71,30 +71,44 @@ nav
     margin-left: 15%;
     text-align: justify;
 }
-
-.container
+.title div h2
 {
-    display: flex;
-    justify-content: center;
-}
-.number
-{
-    width: 30%;
-    flex-direction: column;
+    margin: 2.5rem 0rem;
 }
 
-.number h3
+.title div h2 #ticket
 {
+    height: 4rem;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    color:white;
+    font-size: 3rem;
     text-align: center;
-    font-size: 2rem;
+    width: 10%;
 }
-.number div
+.title div h2 #total
 {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    height: 4rem;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    color:white;
+    font-size: 3rem;
+    text-align: center;
+    width: 15%;
 }
-
+.title div h2 #time
+{
+    height: 4rem;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    color:white;
+    font-size: 3rem;
+    text-align: center;
+    width: 15%;
+}
 .number div input
 {
     height: 4rem;

@@ -41,12 +41,12 @@ include('connection.php');
                 <div class = "number">
                     <h3>What Time?</h3>
                     <div>
-                        <select id = "time">
-                            <option> 10:00AM</option>
-                            <option> 12:30AM</option>
-                            <option> &nbsp;3:00AM</option>
-                            <option> &nbsp;5:30AM</option>
-                            <option> &nbsp;8:00AM</option>
+                        <select id = "time" value = "00:00AM">
+                            <option value = "10:00AM"> 10:00AM</option>
+                            <option value = "12:30PM"> 12:30PM</option>
+                            <option value = "3:00PM"> &nbsp;3:00PM</option>
+                            <option value = "5:30PM"> &nbsp;5:30PM</option>
+                            <option value = "8:00PM"> &nbsp;8:00PM</option>
                         </select>
                     </div>
                 </div>
@@ -82,6 +82,16 @@ include('connection.php');
     }
 
     document.querySelector('#ticketvalue').value = count;
+
+    let time = document.querySelector('#time').value;
+
+    document.querySelector('#button').addEventListener('click', function() 
+    {
+        time = document.querySelector('#time').value;
+        localStorage.setItem('count', count);
+        localStorage.setItem('time', time);
+        window.location.href = "../User/receipt1.php";
+    });
     </script>
 </body>
 </html>

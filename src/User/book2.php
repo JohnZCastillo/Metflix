@@ -45,9 +45,9 @@ $price2 = $row2['price'];
                 <div class = "number">
                     <h3>How many tickets?</h3>
                     <div>
-                        <button id = "add">+</button>
-                        <input type = "text">
-                        <button id = "subtract">-</button>
+                        <button id = "add" onclick="buttonClick(1)">+</button>
+                        <input type = "text" id = "ticketvalue">
+                        <button id = "subtract" onclick="buttonClick(0)">-</button>
                     </div>
                 </div>
                 <div class = "number">
@@ -70,5 +70,47 @@ $price2 = $row2['price'];
     <div class="footer">
         <p class="copyright-text">&copy Dahan DelaPeña Dulay Granada Marasigan Mojica</p>
     </div>
+
+    <script>
+    let count = 0;
+
+    function buttonClick(choice) 
+    {
+        if(choice === 1)
+        {
+            count += 1;
+        }
+        else if(choice === 0 && count === 0)
+        {
+            count += 0;
+        }
+        else if(choice === 0 )
+        {
+            count += (-1);
+        }
+
+        document.querySelector('#ticketvalue').value = count;
+        
+    }
+
+    document.querySelector('#ticketvalue').value = count;
+
+    let time = document.querySelector('#time').value;
+
+    document.querySelector('#button').addEventListener('click', function() 
+    {
+        time = document.querySelector('#time').value;
+        localStorage.setItem('count', count);
+        localStorage.setItem('time', time);
+        
+        let url = "../User/receipt2.php";
+
+        let variable = "<?php echo $number; ?>";
+
+        console.log(variable);
+        url += "?number=" +  encodeURIComponent(variable);
+        window.location.href = url;
+    });
+    </script>
 </body>
 </html>
