@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <body>
     <div class="header">
         <nav>
-            <a href="../../index2.html"><img class="logo" src="../Media/Logo.png"></a>
+            <a href="../../index2.php"><img class="logo" src="../Media/Logo.png"></a>
         </nav>
     </div>
     <div class="signuppage">

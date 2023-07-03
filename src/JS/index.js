@@ -1,5 +1,5 @@
 setTimeout(function()
-{ window.location.href = 'index2.html'},3000);
+{ window.location.href = 'index2.php'},3000);
 
 const m_tl = gsap.timeline();
 m_tl
