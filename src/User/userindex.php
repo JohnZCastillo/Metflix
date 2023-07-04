@@ -42,11 +42,19 @@ $fullname = $row['fullname'];
                     </div>
                 </a>
             </div>
-            <button onclick="history.back()">Log Out</button>
+            <button id = "back">Log Out</button>
         </div>
     </div>
     <div class="footer">
         <p class="copyright-text">&copy Dahan DelaPeña Dulay Granada Marasigan Mojica</p>
     </div>
+
+    <script>
+        let back = document.querySelector('#back');
+        back.addEventListener('click', function(event)
+        {
+            window.location.href = "../Webpages/signin.php";
+        });
+    </script>
 </body>
 </html>

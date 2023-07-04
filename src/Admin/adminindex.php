@@ -42,12 +42,12 @@ $result2 = mysqli_query($connection, "SELECT * FROM data");
         <nav>
             <img class = "logo"  src = "../Media/Logo.png">
             <div>
-                <button onclick="history.back()"> Logout </button>
+                <button id = "logout"> Logout </button>
             </div>
         </nav>
         <div class = "titlebutton">
             <h1>IMex</h1>
-            <button class = "modify">Modify</button>
+            <button class = "modify" id = "imex">Modify</button>
         </div> 
         <?php
         echo   '<div class="list">
@@ -61,8 +61,8 @@ $result2 = mysqli_query($connection, "SELECT * FROM data");
         <div class = "titlebutton">
             <h1>2D Movies</h1>
             <div>
-                <button class = "add">Add</button>
-                <button class = "modify">Modify</button>
+                <button class = "add" id = "add">Add</button>
+                <button class = "modify" id = "modify">Modify</button>
             </div>
         </div> 
     
@@ -90,7 +90,31 @@ $result2 = mysqli_query($connection, "SELECT * FROM data");
         }
         ?>
     </div>
-    
     </div>
+
+    <script>
+        let buttonadd = document.querySelector('#add');
+        let buttonmodify = document.querySelector('#modify');
+        let buttonimex = document.querySelector('#imex');
+        let logout = document.querySelector('#logout');
+
+        buttonadd.addEventListener('click', function(event)
+        {
+            window.location.href = "2dadd.php";
+        });
+        buttonmodify.addEventListener('click', function(event)
+        {
+            window.location.href = "2dmodify.php";
+        });
+        buttonimex.addEventListener('click', function(event)
+        {
+            window.location.href = "imexmodify.php";
+        });
+        logout.addEventListener('click', function(event)
+        {
+            window.location.href = "../Webpages/signin.php";
+        });
+
+    </script>
 </body>
 </html>

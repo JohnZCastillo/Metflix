@@ -19,7 +19,7 @@ include('connection.php');
         window.location.href = "userindex.php";
     }
     </script>
-
+    
     <title>Metflix</title>
 </head>
 <body>
